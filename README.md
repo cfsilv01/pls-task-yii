@@ -1,7 +1,7 @@
 # A simple mock application that uses the Yii 1.1 framework.
 
 This repository contains a web application that has a login page containing four slide on the right-hand side and a product updates page.
-The login functionality is not implemented and does not need to be; nothing currently requires authorization. It's simply meant to represent a real-world user interface.
+The login functionality is not implemented and does not need to be; nothing currently requires authorization. It's simply meant  to represent a real-world user interface.
 
 ## Getting Started
 
