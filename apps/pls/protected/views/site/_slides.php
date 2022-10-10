@@ -27,8 +27,8 @@
 			<div class="overlay"></div>
 			<div class="content">
 				<i class="fal fa-comment-alt-edit"></i>
-				<h3>SuperEval’s latest products updates include:</h3>
-				<div class="row is-flex">
+				<h3>SuperEval’s latest product update:</h3>
+				<!--div class="row is-flex">
 					<div class="col-md-6">
 						<div class="bubble">1. Show evaluator's previous evaluation data.</div>
 					</div>
@@ -49,14 +49,40 @@
 				</div>
 				<a href="https://supereval.com/blog/supereval-recent-platform-updates" target="_blank"
 				   class="btn btn-primary">Read
-					More</a>
+					More</a-->
+				<?php
+					if (!empty($slide3RssUpdate)) {	
+						foreach($slide3RssUpdate as $item) {
+							?>
+							<div class="col-md-12">
+								<div class="bubble">
+									<h3>
+									<a class="rss-update-a" href="<?= $item->link ?>" rel="bookmark" title="<?= $item->title ?>"><?= $item->title ?></a>
+								    </h3>
+								</div>
+								<div>
+									<p>
+										<?= $item->description ?>
+									</p>
+								</div>
+							</div>
+							<?php
+						}
+					}
+					else {
+						?>
+						<?= Yii::t('pls', 'No updates are available at this time.') ?>
+						<?php
+					}
+				?>
 			</div>
 		</div>
 		<div class="swiper-slide">
 			<div class="overlay"></div>
 			<div class="content">
 				<i class="fal fa-comment-alt-lines"></i>
-				<h3>Six Benefits of Having an Open Communication System with Teachers and School Staff</h3>
+				<h3>SuperEval’s latest blog:</h3>
+				<!--h3>Six Benefits of Having an Open Communication System with Teachers and School Staff</h3>
 				<div class="row">
 					<div class="col-md-12 bubble">
 						This communication system has a number of perks. Here are six ways your school district may be
@@ -64,7 +90,32 @@
 					</div>
 				</div>
 				<a href="https://supereval.com/blog/open-communication-system" target="_blank" class="btn btn-primary">Read
-					Our Blog</a>
+					Our Blog</a-->
+				<?php
+					if (!empty($slide4RssUpdate)) {
+						foreach($slide4RssUpdate as $item) {
+							?>
+							<div class="col-md-12">
+								<div class="bubble">
+									<h3>
+									<a class="rss-update-a" href="<?= $item->link ?>" rel="bookmark" title="<?= $item->title ?>"><?= $item->title ?></a>
+								    </h3>
+								</div>
+								<div>
+									<p>
+										<?= $item->description ?>
+									</p>
+								</div>
+							</div>
+							<?php
+						}
+					}
+					else {
+						?>
+						<?= Yii::t('pls', 'Latest Blog post unavailable.') ?>
+						<?php
+					}
+				?>
 			</div>
 		</div>
 	</div>

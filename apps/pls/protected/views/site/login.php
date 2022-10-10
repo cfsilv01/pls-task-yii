@@ -19,7 +19,9 @@ $this->breadcrumbs = [
 		</div>
 		<div class="col-md-6">
 			<?php
-			$this->renderPartial('_slides');
+			$this->renderPartial('_slides', [
+				'slide3RssUpdate' => $slide3RssUpdate,
+				'slide4RssUpdate' => $slide4RssUpdate]);
 			?>
 		</div>
 	</div>
